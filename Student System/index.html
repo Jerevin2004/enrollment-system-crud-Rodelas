@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Student System </title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Student System</h1>
+    <nav>
+      <button data-tab="students" class="active">Students</button>
+      <button data-tab="programs">Programs</button>
+      <button data-tab="years">Years & Semesters</button>
+      <button data-tab="subjects">Subjects</button>
+      <button data-tab="enroll">Enrollments</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="students" class="tab active">
+      <div class="toolbar">
+        <button id="add-student-btn">Add Student</button>
+        <select id="filter-program"></select>
+      </div>
+      <table id="students-table">
+        <thead>
+          <tr>
+            <th>ID</th><th>Name</th><th>Program</th><th>Allowance</th><th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="programs" class="tab">
+      <div class="toolbar">
+        <button id="add-program-btn">Add Program</button>
+      </div>
+      <table id="programs-table">
+        <thead>
+          <tr><th>ID</th><th>Name</th><th>Institute</th><th>Actions</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="years" class="tab">
+      <div class="toolbar">
+        <button id="add-year-btn">Add Year</button>
+        <button id="add-semester-btn">Add Semester</button>
+      </div>
+      <table id="years-table">
+        <thead><tr><th>ID</th><th>School Year</th><th>Semesters (IDs / Name)</th><th>Actions</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="subjects" class="tab">
+      <div class="toolbar">
+        <button id="add-subject-btn">Add Subject</button>
+        <select id="filter-semester"></select>
+      </div>
+      <table id="subjects-table">
+        <thead><tr><th>ID</th><th>Name</th><th>Semester</th><th>Actions</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="enroll" class="tab">
+      <div class="toolbar">
+        <form id="enroll-form">
+          <label>Student:
+            <select id="enroll-student"></select>
+          </label>
+          <label>Subject:
+            <select id="enroll-subject"></select>
+          </label>
+          <button type="submit">Enroll</button>
+        </form>
+      </div>
+      <div id="enroll-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <small></small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
